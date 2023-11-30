@@ -34,6 +34,12 @@ Route::get('/about', function () {
 Route::get('/produk', 'App\Http\Controllers\ProdukController@index');
 
 //Route::resource('produk', ProdukController::class, ['except' => [
-  //  'create', 'update', 'delete', 'show'
+// 'create', 'update', 'delete', 'show'
+//]]);
 
-]]);
+//route::get('/profile', function () {
+//$nama = "ayu lestari";
+//return view('profile', compact('nama'));
+
+//});
+Route::resource('/profile', App\Http\Controllers\ProfileController::class);
