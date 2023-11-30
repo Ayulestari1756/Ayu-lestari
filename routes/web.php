@@ -33,7 +33,7 @@ Route::get('/about', function () {
 
 Route::get('/produk', 'App\Http\Controllers\ProdukController@index');
 
-Route::resource('produk', ProdukController::class, ['except' => [
-    'create', 'update', 'delete', 'show'
+//Route::resource('produk', ProdukController::class, ['except' => [
+  //  'create', 'update', 'delete', 'show'
 
 ]]);
