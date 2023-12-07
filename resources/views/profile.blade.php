@@ -17,7 +17,7 @@
         @forelse($teman ['nama'] as $teman)
         <tr>
             <td>Temanku :</td>
-            <td>{{  $teman }},</td>
+            <td>{{  $teman }}</td>
         </tr>
         @empty
         <tr>
@@ -26,11 +26,11 @@
     </table>
 
     <h2>Ini adalah foreach</h2>
-    <table border='3'>
+    <table border='5'>
         @foreach($nama_list ['nama'] as $teman)
         <tr>
             <td>Temanku :</td>
-            <td>{{  $teman }},</td>
+            <td>{{  $teman }}</td>
         </tr>
         @endforeach
     </table>

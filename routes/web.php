@@ -31,7 +31,7 @@ Route::get('/about', function () {
     return view('about', $data);
 });
 
-Route::get('/produk', 'App\Http\Controllers\ProdukController@index');
+//Route::get('/produk', 'App\Http\Controllers\ProdukController@index');
 
 //Route::resource('produk', ProdukController::class, ['except' => [
 // 'create', 'update', 'delete', 'show'
@@ -43,3 +43,9 @@ Route::get('/produk', 'App\Http\Controllers\ProdukController@index');
 
 //});
 Route::resource('/profile', App\Http\Controllers\ProfileController::class);
+
+//Auth::routes();
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('/produk', App\Http\Controllers\ProdukController::class);
+Route::resource('/buku', App\Http\Controllers\BukuController::class);

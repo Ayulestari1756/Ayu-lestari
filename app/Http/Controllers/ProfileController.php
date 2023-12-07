@@ -22,12 +22,12 @@ class ProfileController extends Controller
 
         $nama_list = array(
             "nama" => array(
-                'sutia',
-                'azhira',
-                'fitria',
+                'sahira',
+                'aiwaridah',
+                'fitri',
             )
         );
 
-        return view('profile', compact('nama', 'alamat', 'tanggal_lahir', 'teman', ('nama_list')));
+        return view('profile', compact('nama', 'alamat', 'tanggal_lahir', 'teman', 'nama_list'));
     }
 }

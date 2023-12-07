@@ -1,2 +1,2 @@
-{{ $data ['pageTitle'] }}
-{{ $data ['content'] }}
+{{-- {{ $data ['pageTitle'] }}
+{{ $data ['content'] }} --}}
