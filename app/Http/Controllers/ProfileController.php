@@ -20,6 +20,14 @@ class ProfileController extends Controller
             ),
         );
 
-        return view('profile', compact('nama', 'alamat', 'tanggal_lahir', 'teman'));
+        $nama_list = array(
+            "nama" => array(
+                'sutia',
+                'azhira',
+                'fitria',
+            )
+        );
+
+        return view('profile', compact('nama', 'alamat', 'tanggal_lahir', 'teman', ('nama_list')));
     }
 }

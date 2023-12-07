@@ -27,7 +27,7 @@
 
     <h2>Ini adalah foreach</h2>
     <table border='3'>
-        @foreach($teman ['nama'] as $teman)
+        @foreach($nama_list ['nama'] as $teman)
         <tr>
             <td>Temanku :</td>
             <td>{{  $teman }},</td>
