@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Auth::routes();
+
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::get('/home', 'HomeController@index');
@@ -44,8 +45,24 @@ Route::get('/about', function () {
 //});
 Route::resource('/profile', App\Http\Controllers\ProfileController::class);
 
-//Auth::routes();
+
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('/produk', App\Http\Controllers\ProdukController::class);
+
 Route::resource('/buku', App\Http\Controllers\BukuController::class);
+
+// Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::middleware(['auth', 'user', 'admin'])->group(function () {
+    Route::resource('/produk', App\Http\Controllers\ProdukController::class);
+    Route::get('admin', function () {
+        return 'admin page';
+    });
+
+    Auth::routes();
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
