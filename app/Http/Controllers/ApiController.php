@@ -31,8 +31,25 @@ class ApiController extends Controller
 
     public function produk_by_id($id)
     {
-        $product = produk::where('id', $id)->get();
+        $product = produk::where('id', $id)->first();
         return response()->json($product);
+    }
+
+    public function produk_update($id, Request $request)
+    {
+        $product = produk::where('id', $id)->update([
+            'product'       => $request->api_product,
+            'price'         => $request->api_price,
+            'stock'         => $request->api_stock,
+        ]);
+
+
+        $response = array(
+            'responseCode'   => '00',
+            'responseStatus' => 'Succes',
+        );
+
+        return response()->json($response);
     }
 
     public function produk_delete($id)
@@ -45,5 +62,16 @@ class ApiController extends Controller
         );
 
         return response()->json($response);
+    }
+
+    public function create_produk()
+    {
+        $formData = [
+            'product'  => null,
+            'price'    => null,
+            'stock'    => null,
+        ];
+
+        return response()->json($formData);
     }
 }

@@ -13,5 +13,6 @@ class produk extends Model
         'product',
         'price',
         'stock',
+        'isAdmin',
     ];
 }

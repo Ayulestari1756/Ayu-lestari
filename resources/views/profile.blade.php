@@ -15,7 +15,7 @@
     <h1>Ini adalah forelse</h1>
     <table border='3'>
         @forelse($teman ['nama'] as $teman)
-        <tr>
+           <tr>
             <td>Temanku :</td>
             <td>{{  $teman }}</td>
         </tr>

@@ -18,14 +18,14 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'name' => 'Admin',
-                'email' => 'ayu@gmail.com',
-                'password' => Hash::make('12345678'),
+                'email' => 'ayuuu123@gmail.com',
+                'password' => Hash::make('mardira12'),
                 'isAdmin' => true
             ],
             [
                 'name' => 'User',
-                'email' => 'lestariia563@gmail.com',
-                'password' => Hash::make('Mardira1'),
+                'email' => 'arip29@gmail.com',
+                'password' => Hash::make('12345678'),
                 'isAdmin' => false
             ]
         ]);
